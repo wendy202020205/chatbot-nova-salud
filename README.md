@@ -1,11 +1,25 @@
 # Chatbot Nova Salud - Farmacia
 
-Chatbot RAG (Retrieval-Augmented Generation) para consultas de productos, precios y políticas de la farmacia Nova Salud.
+Chatbot RAG con LangChain, Gemini y FAISS para consultas de productos y horarios.
 
-## Requisitos
-- Python 3.9+
-- Cuenta de Google AI Studio (API key de Gemini)
+## Tecnologías
+- LangChain (orquestación RAG)
+- Google Gemini 2.5 Flash (modelo IA)
+- FAISS (búsqueda semántica)
+- FastAPI + Docker (backend en Render)
+- React (frontend)
 
-## Instalación
-```bash
-pip install -r requirements.txt
+## Arquitectura
+Usuario → Web (React) → API (Render) → LangChain → FAISS → Gemini → Respuesta
+
+## URLs
+- API: https://chatbot-nova-salud.onrender.com
+- Repositorio: https://github.com/wendy202020205/chatbot-nova-salud
+
+## Ejemplos de preguntas
+- ¿Cuánto cuesta la aspirina?
+- Horario de atención domingos
+- ¿Tienen delivery gratis?
+
+## Autor
+Wendy - Proyecto para curso de Ingeniería de Software con IA
