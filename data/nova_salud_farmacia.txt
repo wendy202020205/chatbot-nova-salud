@@ -1,0 +1,41 @@
+NOVA SALUD - FARMACIA ONLINE
+
+Bienvenido a Nova Salud, tu farmacia de confianza.
+
+PRODUCTOS Y PRECIOS:
+- Aspirina 500mg (caja 10 comprimidos): S/ 12.50
+- Ibuprofeno 400mg (caja 20 comprimidos): S/ 18.90
+- Paracetamol 500mg (caja 30 comprimidos): S/ 15.30
+- Vitamina C 1000mg (30 tabletas): S/ 25.00
+- Complejo B (30 cápsulas): S/ 32.50
+- Omeprazol 20mg (caja 14 cápsulas): S/ 22.00
+- Alcohol en gel 500ml: S/ 15.00
+- Mascarillas KN95 (unidad): S/ 3.50
+
+HORARIOS DE ATENCIÓN:
+- Tienda física: Lunes a sábado 9am - 9pm, Domingos 10am - 2pm
+- Atención en línea (chat y pedidos): 24/7
+
+ENVÍOS:
+- Delivery en distritos cercanos: S/ 8.00 (gratis en compras mayores a S/ 80)
+- Tiempo de entrega: 1 a 3 horas en zonas urbanas.
+- Puedes recolectar en tienda sin costo adicional.
+
+POLÍTICAS:
+- Pedido mínimo: S/ 10 para delivery.
+- Aceptamos tarjetas, Yape, Plin y efectivo contraentrega.
+- Devoluciones: hasta 7 días con producto sellado.
+
+PROMOCIONES VIGENTES:
+- 10% de descuento en tu primera compra con código: NOVA10
+- Lleva 2 Aspirinas y paga S/ 22 (ahorro S/ 3)
+
+PREGUNTAS FRECUENTES:
+¿Se necesita receta para aspirina? No, es venta libre.
+¿Tienen atención a domicilio? Sí, delivery propio.
+¿Puedo agregar productos a un carrito y pagar después? Sí, el carrito guarda los productos hasta que confirmes el pedido.
+¿Cómo sé si un producto está disponible? El chatbot puede consultar stock (simulado).
+
+CONTACTO:
+WhatsApp: +51 999 123 456
+Correo: ventas@novasalud.com
