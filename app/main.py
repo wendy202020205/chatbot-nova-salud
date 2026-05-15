@@ -29,9 +29,9 @@ documentos = loader.load()
 splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
 chunks = splitter.split_documents(documentos)
 
-print("🔄 Creando embeddings...")
+print("🔄 Creando embeddings con FAISS...")
 embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
-vectorstore = FAISS.from_documents(chunks, embeddings)  # ← Cambiado a FAISS
+vectorstore = FAISS.from_documents(chunks, embeddings)
 
 print("🔄 Configurando modelo...")
 llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.5)
