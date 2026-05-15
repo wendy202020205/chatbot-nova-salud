@@ -23,3 +23,9 @@ Usuario → Web (React) → API (Render) → LangChain → FAISS → Gemini → 
 
 ## Autor
 Wendy - Proyecto para curso de Ingeniería de Software con IA
+
+## Trabajo futuro (mejoras pendientes)
+- Memoria conversacional (recordar contexto de la conversación)
+- Historial de chat persistente
+- Carga dinámica de múltiples documentos PDF
+- Autenticación de usuarios
