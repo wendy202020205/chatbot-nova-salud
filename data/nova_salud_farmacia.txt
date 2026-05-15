@@ -81,4 +81,8 @@ CONTACTO
 WhatsApp: +51 999 123 456
 Correo: ventas@novasalud.com
 Instagram: @novasalud
+<<<<<<< HEAD
 Facebook: NovaSaludPeru
+=======
+Facebook: NovaSaludPeru
+>>>>>>> be146397fa09da71fac6bf0c2902aa98a840756d

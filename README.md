@@ -22,4 +22,14 @@ Usuario → Web (React) → API (Render) → LangChain → FAISS → Gemini → 
 - ¿Tienen delivery gratis?
 
 ## Autor
+<<<<<<< HEAD
 Wendy - Proyecto para curso de Ingeniería de Software con IA
+=======
+Wendy - Proyecto para curso de Ingeniería de Software con IA
+
+## Trabajo futuro (mejoras pendientes)
+- Memoria conversacional (recordar contexto de la conversación)
+- Historial de chat persistente
+- Carga dinámica de múltiples documentos PDF
+- Autenticación de usuarios
+>>>>>>> be146397fa09da71fac6bf0c2902aa98a840756d
