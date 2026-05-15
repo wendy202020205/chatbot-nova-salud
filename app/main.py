@@ -21,7 +21,7 @@ class Pregunta(BaseModel):
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 if GOOGLE_API_KEY:
     genai.configure(api_key=GOOGLE_API_KEY)
-    model = genai.GenerativeModel('models/gemini-pro-latest')
+    model = genai.GenerativeModel('models/gemini-2.5-flash')
 else:
     print("⚠️ ADVERTENCIA: GOOGLE_API_KEY no configurada")
 
