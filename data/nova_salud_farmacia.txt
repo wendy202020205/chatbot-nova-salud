@@ -1,8 +1,9 @@
 NOVA SALUD - FARMACIA ONLINE
-
 Bienvenido a Nova Salud, tu farmacia de confianza.
 
-PRODUCTOS Y PRECIOS:
+=================================
+PRODUCTOS Y PRECIOS
+=================================
 - Aspirina 500mg (caja 10 comprimidos): S/ 12.50
 - Ibuprofeno 400mg (caja 20 comprimidos): S/ 18.90
 - Paracetamol 500mg (caja 30 comprimidos): S/ 15.30
@@ -11,31 +12,73 @@ PRODUCTOS Y PRECIOS:
 - Omeprazol 20mg (caja 14 cápsulas): S/ 22.00
 - Alcohol en gel 500ml: S/ 15.00
 - Mascarillas KN95 (unidad): S/ 3.50
+- Jarabe para la tos (120ml): S/ 18.00
+- Curitas (caja 20 unidades): S/ 8.50
 
-HORARIOS DE ATENCIÓN:
+=================================
+USOS Y BENEFICIOS (Información referencial)
+=================================
+- Para la fiebre: Paracetamol 500mg es el más recomendado. También Ibuprofeno 400mg ayuda a bajar la fiebre.
+- Para el dolor de cabeza: Aspirina 500mg o Paracetamol 500mg son efectivos.
+- Para el dolor muscular o inflamación: Ibuprofeno 400mg es antiinflamatorio.
+- Para la gripe o resfrío: Vitamina C 1000mg fortalece las defensas, Paracetamol para la fiebre.
+- Para la acidez o gastritis: Omeprazol 20mg, tomar media hora antes de las comidas.
+- Para la tos: Jarabe para la tos, tomar 10ml cada 8 horas.
+
+=================================
+HORARIOS DE ATENCIÓN
+=================================
 - Tienda física: Lunes a sábado 9am - 9pm, Domingos 10am - 2pm
-- Atención en línea (chat y pedidos): 24/7
+- Atención en línea (chat y pedidos): 24/7, todos los días
+- Atención farmacéutica gratuita: Lunes a viernes 10am - 6pm
 
-ENVÍOS:
-- Delivery en distritos cercanos: S/ 8.00 (gratis en compras mayores a S/ 80)
-- Tiempo de entrega: 1 a 3 horas en zonas urbanas.
-- Puedes recolectar en tienda sin costo adicional.
+=================================
+ENVÍOS Y DELIVERY
+=================================
+- Delivery en distritos cercanos: S/ 8.00
+- Envío GRATIS en compras mayores a S/ 80
+- Tiempo de entrega: 1 a 3 horas en zonas urbanas
+- Puedes recolectar en tienda sin costo adicional
+- Zonas de delivery: Lima Moderna, San Isidro, Miraflores, Surco, San Borja
 
-POLÍTICAS:
-- Pedido mínimo: S/ 10 para delivery.
-- Aceptamos tarjetas, Yape, Plin y efectivo contraentrega.
-- Devoluciones: hasta 7 días con producto sellado.
+=================================
+MÉTODOS DE PAGO
+=================================
+- Tarjetas de crédito/débito (Visa, Mastercard)
+- Yape y Plin (código: 999123456)
+- Efectivo contraentrega (solo delivery)
+- Transferencia bancaria (BCP, Interbank)
 
-PROMOCIONES VIGENTES:
-- 10% de descuento en tu primera compra con código: NOVA10
+=================================
+POLÍTICAS
+=================================
+- Pedido mínimo para delivery: S/ 10
+- Devoluciones: hasta 7 días con producto sellado
+- Cambios: solo si el producto está en mal estado
+- Receta médica requerida para medicamentos controlados (consultar)
+- Despacho inmediato para pedidos antes de 8pm
+
+=================================
+PROMOCIONES VIGENTES
+=================================
+- 10% de descuento en primera compra con código: NOVA10
 - Lleva 2 Aspirinas y paga S/ 22 (ahorro S/ 3)
+- 15% de descuento en compras mayores a S/ 150
 
-PREGUNTAS FRECUENTES:
+=================================
+PREGUNTAS FRECUENTES
+=================================
 ¿Se necesita receta para aspirina? No, es venta libre.
 ¿Tienen atención a domicilio? Sí, delivery propio.
-¿Puedo agregar productos a un carrito y pagar después? Sí, el carrito guarda los productos hasta que confirmes el pedido.
-¿Cómo sé si un producto está disponible? El chatbot puede consultar stock (simulado).
+¿Puedo agregar productos a un carrito y pagar después? Sí, el carrito guarda los productos hasta que confirmes.
+¿Cómo sé si un producto está disponible? El chatbot puede consultar stock simulado.
+¿Puedo pagar contraentrega? Sí, solo para delivery en zonas seleccionadas.
+¿Hacen factura? Sí, solicitarla al momento del pedido.
 
-CONTACTO:
+=================================
+CONTACTO
+=================================
 WhatsApp: +51 999 123 456
 Correo: ventas@novasalud.com
+Instagram: @novasalud
+Facebook: NovaSaludPeru
