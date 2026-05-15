@@ -1,12 +1,15 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-import google.generativeai as genai
+from langchain_community.document_loaders import TextLoader, PyPDFLoader
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
+from langchain_community.vectorstores import FAISS
+from langchain.chains import RetrievalQA
 import os
 
 app = FastAPI()
 
-# Configurar CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -17,22 +20,55 @@ app.add_middleware(
 class Pregunta(BaseModel):
     query: str
 
-# Configurar Gemini
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-if GOOGLE_API_KEY:
-    genai.configure(api_key=GOOGLE_API_KEY)
-    model = genai.GenerativeModel('models/gemini-2.5-flash')
-else:
-    print("⚠️ ADVERTENCIA: GOOGLE_API_KEY no configurada")
 
-# Cargar el documento de Nova Salud
-try:
-    with open("data/nova_salud_farmacia.txt", "r", encoding="utf-8") as f:
-        documento = f.read()
-    print("✅ Documento cargado correctamente")
-except FileNotFoundError:
-    print("❌ ERROR: No se encontró el archivo data/nova_salud_farmacia.txt")
-    documento = ""
+# --- Esta es la parte que cambiamos ---
+print("🔄 Cargando documento/s...")
+documentos = []
+docs_path = "data/"
+
+# Cargar el archivo TXT
+txt_path = os.path.join(docs_path, "nova_salud_farmacia.txt")
+if os.path.exists(txt_path):
+    loader_txt = TextLoader(txt_path, encoding="utf-8")
+    documentos.extend(loader_txt.load())
+    print("✅ Documento TXT cargado correctamente.")
+else:
+    print("❌ No se encontró el archivo TXT en la carpeta data/")
+
+# Cargar el archivo PDF
+pdf_path = os.path.join(docs_path, "nova_salud_farmacia.pdf")
+if os.path.exists(pdf_path):
+    loader_pdf = PyPDFLoader(pdf_path)
+    documentos.extend(loader_pdf.load())
+    print("✅ Documento PDF cargado correctamente.")
+else:
+    print("❌ No se encontró el archivo PDF en la carpeta data/")
+# --- Fin de la modificación ---
+
+# Verificamos si se cargó al menos un documento
+if not documentos:
+    raise Exception("No se pudo cargar ningún documento (TXT o PDF). Revisa la carpeta data/")
+
+# El resto del código sigue igual
+print(f"Total de páginas/fragmentos cargados: {len(documentos)}")
+splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
+chunks = splitter.split_documents(documentos)
+
+print("🔄 Creando embeddings con FAISS...")
+embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
+vectorstore = FAISS.from_documents(chunks, embeddings)
+
+print("🔄 Configurando modelo...")
+llm = ChatGoogleGenerativeAI(model="models/gemini-2.5-flash", temperature=0.5)
+retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
+
+qa_chain = RetrievalQA.from_chain_type(
+    llm=llm,
+    retriever=retriever,
+    return_source_documents=False
+)
+print("✅ API lista")
 
 @app.get("/")
 def root():
@@ -40,27 +76,5 @@ def root():
 
 @app.post("/chat")
 def chat(pregunta: Pregunta):
-    # Si no hay API key o documento, responder con mensaje de error
-    if not GOOGLE_API_KEY:
-        return {"respuesta": "Error: API key de Gemini no configurada en Render"}
-    
-    if not documento:
-        return {"respuesta": "Error: Documento de Nova Salud no encontrado"}
-    
-    # Construir el prompt
-    prompt = f"""Eres un asistente de atención al cliente de NOVA SALUD, una farmacia.
-Responde SOLO basándote en la siguiente información de la farmacia.
-Si la pregunta no tiene respuesta en el documento, di: "No tengo esa información en mis documentos".
-
-INFORMACIÓN DE NOVA SALUD:
-{documento}
-
-PREGUNTA DEL CLIENTE: {pregunta.query}
-
-RESPUESTA (sé amable y conciso):"""
-    
-    try:
-        respuesta = model.generate_content(prompt)
-        return {"respuesta": respuesta.text}
-    except Exception as e:
-        return {"respuesta": f"Error al generar respuesta: {str(e)}"}
+    respuesta = qa_chain.invoke({"query": pregunta.query})
+    return {"respuesta": respuesta["result"]}
