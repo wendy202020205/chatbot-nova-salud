@@ -7,3 +7,4 @@ langchain-google-genai==1.0.3
 faiss-cpu
 pydantic==2.7.4
 google-generativeai
+pypdf
